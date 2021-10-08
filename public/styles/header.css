@@ -1,0 +1,14 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #8a82d1;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}

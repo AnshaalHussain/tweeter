@@ -1,0 +1,24 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.border-bottom {
+  border-bottom: 3px solid black;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.tweet-submit {
+  background-color: rgb(66, 66, 218);
+  color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: 'Bungee', cursive;
+
+}
