@@ -1,6 +1,10 @@
+.new-tweet {
+  margin-top: 40px;
+}
+
 .form-container {
-  display: flex;
-  justify-content: center;
+  width: 95%;
+  margin: 0px 20px;
 
 }
 
@@ -14,11 +18,21 @@
 
 }
 
+#tweet-text {
+  width: 100%;
+  border: 1px solid #f8f5f1;
+  background-color: #cfcdc9;
+
+}
+
 .tweet-submit {
   background-color: rgb(66, 66, 218);
   color: white;
   padding-left: 12px;
   padding-right: 12px;
   font-family: 'Bungee', cursive;
+  margin-top: 10px;
+  margin-bottom: 40px;
 
 }
+

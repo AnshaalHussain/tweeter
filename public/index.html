@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-post.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -41,7 +42,7 @@
         </div>
     </nav>
 
-    <header>
+    <header class="header-nav">
       <div class="avatar-container">
           <img src="/images/profile-hex.png"> 
       </div>
@@ -57,7 +58,6 @@
 
         <section class="new-tweet">
           <div class="tweet-container">
-            <h2>Compose Tweet</h2>
             <div class="form-container">
                   <form method="POST" action="/tweets/">
                   <div class="border-bottom">
@@ -67,7 +67,7 @@
                   <div class="counter">
                     <button type="submit" class="tweet-submit">Tweet</button>
                     <output name="counter" class="counter-num" for="tweet-text">
-                      0
+                      140
                     </output> 
                   </div>
                 </form>
@@ -75,6 +75,30 @@
           </div>
         </section>
 
+
+
+        <section id="tweets-container">
+          <article class="tweet-post-container">  
+            <header class="tweet-post-header">
+              <div class="tweet-profile-info">
+                <i class="fas fa-user"></i>
+                <h4>Newton</h4>
+              </div>
+              <p>@SirIssac</p>
+            </header>
+              <p>If i have seen further it is by standing on the shoulder of giants</p>
+
+            <footer class= "footer-container">
+              <p>10 days ago</p>
+              <div>
+                <i class="fas fa-flag footer-icon"></i>
+                <i class="fas fa-retweet footer-icon"></i>
+                <i class="fas fa-heart footer-icon"></i>
+              </div>
+            </footer>
+          </article>
+
+        </section>
 
       </main>
     </div>

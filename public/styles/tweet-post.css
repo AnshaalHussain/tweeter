@@ -1,0 +1,44 @@
+
+.tweet-post-container {
+  border: 4px solid rgb(87, 87, 87);
+  margin: 15px;
+  padding: 5px 25px;
+
+
+}
+
+.tweet-post-container:hover {
+  box-shadow: 5px 10px 10px #888888;
+}
+
+.tweet-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.tweet-profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  
+}
+
+.tweet-post-container footer {
+  border-top: 3px solid black;
+
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-icon:hover {
+  color: rgb(153, 153, 83);
+
+}

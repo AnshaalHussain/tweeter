@@ -4,3 +4,19 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(function() {
+
+  const tweetData = {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+        "handle": "@SirIsaac"
+      },
+    "content": {
+        "text": "If I have seen further it is by sitting on the shoulders of giants"
+      },
+    "created_at": 1461116232227
+ }
+
+ 
+});

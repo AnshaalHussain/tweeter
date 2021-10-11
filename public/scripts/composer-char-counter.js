@@ -3,14 +3,20 @@ $(document).ready(function() {
 
 
 $("#tweet-text").keyup(function() {
-  let counter = 0;
+  let counter = 140;
 
-  counter = $(this).val().length
+  keypressCounter = $(this).val().length
 
-  $(this).parent().parent().find(".counter-num").text(counter)
+  let newLen = counter - keypressCounter;
+
+  $(this).parent().parent().find(".counter-num").text(newLen)
   
-  if(counter > 140) {
+  if(newLen < 0) {
     $(this).parent().parent().find(".counter-num").css("color", "red")
+  }
+
+  if(newLen > 0) {
+    $(this).parent().parent().find(".counter-num").css("color", "black")
   }
 
 });
