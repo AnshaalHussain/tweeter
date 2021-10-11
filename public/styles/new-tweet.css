@@ -1,10 +1,7 @@
-.new-tweet {
-  margin-top: 40px;
-}
 
 .form-container {
   width: 95%;
-  margin: 0px 20px;
+  margin: 45px 20px;
 
 }
 
@@ -36,3 +33,11 @@
 
 }
 
+.error-message {
+  border: 3px solid red;
+  color: rgb(139, 44, 44);
+  border-radius: 3px;
+  padding: 5px;
+  width: 90%;
+  margin: 15px 18px;
+}

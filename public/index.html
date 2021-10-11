@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -26,6 +28,7 @@
     src="https://code.jquery.com/jquery-3.6.0.js"
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -42,6 +45,7 @@
         </div>
     </nav>
 
+  <div class="breakpoint-desktop">
     <header class="header-nav">
       <div class="avatar-container">
           <img src="/images/profile-hex.png"> 
@@ -58,8 +62,9 @@
 
         <section class="new-tweet">
           <div class="tweet-container">
+            <p class="error-message">Error</p>
             <div class="form-container">
-                  <form method="POST" action="/tweets/">
+                  <form method="POST" action="/tweets/" id="form-submit">
                   <div class="border-bottom">
                     <label for="tweet-text">What are you humming about?</label>
                   </div>
@@ -78,29 +83,11 @@
 
 
         <section id="tweets-container">
-          <article class="tweet-post-container">  
-            <header class="tweet-post-header">
-              <div class="tweet-profile-info">
-                <i class="fas fa-user"></i>
-                <h4>Newton</h4>
-              </div>
-              <p>@SirIssac</p>
-            </header>
-              <p>If i have seen further it is by standing on the shoulder of giants</p>
-
-            <footer class= "footer-container">
-              <p>10 days ago</p>
-              <div>
-                <i class="fas fa-flag footer-icon"></i>
-                <i class="fas fa-retweet footer-icon"></i>
-                <i class="fas fa-heart footer-icon"></i>
-              </div>
-            </footer>
-          </article>
 
         </section>
 
       </main>
     </div>
+  </div>
   </body>
 </html>

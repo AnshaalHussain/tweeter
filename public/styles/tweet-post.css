@@ -38,7 +38,35 @@
   align-items: center;
 }
 
+.footer-icon{
+  color: #545149;
+
+}
+
 .footer-icon:hover {
   color: rgb(153, 153, 83);
 
 }
+
+  /* Laptops / Desktops: minimum width of 1024px */
+  @media only screen and (min-width: 1024px) {
+    .breakpoint-desktop {
+      display: flex;
+      flex-direction: row;
+
+    }
+
+    .header-nav {
+      width: 40%;
+      margin-left: 40px;
+      margin-top: 150px ;
+    }
+    .main-container {
+      width: 50%;
+      margin-top: 150px;
+    }
+
+   
+    
+
+  }
