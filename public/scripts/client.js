@@ -19,7 +19,7 @@ $(document).ready(function() {
       $error.text("Error: There was no text entered ")
       $error.show(350);
       return;
-    } else if ($formValidation.length > 120) {
+    } else if ($formValidation.length > 140) {
       $error.text("Word limit reached")
       $error.show(350);
       return;

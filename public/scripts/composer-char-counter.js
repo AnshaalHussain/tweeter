@@ -15,7 +15,7 @@ $("#tweet-text").keyup(function() {
     $(this).parent().parent().find(".counter-num").css("color", "red")
   }
 
-  if(newLen > 0) {
+  if(newLen >= 0) {
     $(this).parent().parent().find(".counter-num").css("color", "black")
   }
 
