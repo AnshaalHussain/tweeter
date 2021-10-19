@@ -15,6 +15,7 @@ $(document).ready(function() {
     event.preventDefault();
     $error.hide();
     const $formValidation = $("#tweet-text").val();
+
     if(!$formValidation){
       $error.text("Error: There was no text entered ")
       $error.show(350);
@@ -26,24 +27,17 @@ $(document).ready(function() {
     } else {
 
     const serial = $tweetSubmit.serialize();
-
+    $("#tweet-text").val("");
+    $(".counter-num").text("140");
     $.post("/tweets", serial)
+    
+    
+
     loadTweets();
     }
     
   });
 
-  function loadTweets() {
-    $.ajax({
-        url: "/tweets",
-        type: "GET",
-        dataType: 'json',
-        success: function(data){
-          renderTweets(data);
-        }
-    })
-  
-  };
 
   const escape = function (str) {
     let div = document.createElement("div");
@@ -87,6 +81,18 @@ $(document).ready(function() {
       $('#tweets-container').prepend(createTweetElement(dataArray[item]));
     }
 
+  };
+
+  function loadTweets() {
+    $.ajax({
+        url: "/tweets",
+        type: "GET",
+        dataType: 'json',
+        success: function(data){
+          renderTweets(data);
+        }
+    })
+  
   };
 
 
