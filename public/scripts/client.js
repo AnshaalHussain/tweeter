@@ -9,6 +9,7 @@ $(document).ready(function() {
   const $error = $(".error-message");
   const $tweetSubmit = $("#form-submit");
   $error.hide();
+  loadTweets();
   
 
   $tweetSubmit.on("submit", function (event) {
@@ -30,9 +31,12 @@ $(document).ready(function() {
         const serial = $tweetSubmit.serialize();
         $("#tweet-text").val("");
         $(".counter-num").text("140");
-        $.post("/tweets", serial);
-        $("#tweets-container").empty()
-        loadTweets();
+        $.post("/tweets", serial)
+          .then(() => {
+            loadTweets();
+            
+          })
+        
       }
     
   });
@@ -83,9 +87,7 @@ $(document).ready(function() {
 
   };
 
-  function renderTweet (tweet) { 
-      $('#tweets-container').prepend(createTweetElement(tweet));
-  };
+
 
   function loadTweets() {
     $.ajax({
@@ -93,6 +95,7 @@ $(document).ready(function() {
         type: "GET",
         dataType: 'json',
         success: function(data){
+          $("#tweets-container").empty()
           renderTweets(data);
         }
     })
